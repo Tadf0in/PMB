@@ -1,6 +1,6 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import logo from '../../assets/logo.jpeg'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.jpeg';
 
 export default function Navbar() {
   return (
@@ -11,12 +11,14 @@ export default function Navbar() {
                     <NavLink to="" className='nav-link'>ACCUEIL</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="sorties" className='nav-link'>INFOS</NavLink>
+                    <NavLink to="infos" className='nav-link'>INFOS</NavLink>
                 </li>
 
-                <NavLink to="" className="navbar-brand d-flex align-items-center" id="logo">
-                    <img src={logo} className='d-inline-block' alt="Logo" width="150" height="150"/>
-                </NavLink>
+                <li>
+                    <NavLink to="" className="navbar-brand d-flex align-items-center" id="logo">
+                        <img src={logo} className='d-inline-block' alt="Logo" width="150" height="150"/>
+                    </NavLink>
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,16 +26,18 @@ export default function Navbar() {
                     </a>
                     <ul class="dropdown-menu">
                         {[...Array(8)].map((_, i) =>
-                            <li><a class="dropdown-item" href="#">{ 2023 - i }</a></li>
+                            <li>
+                                <NavLink to={ (2023 - i).toString() } className='nav-link dropdown-item'>{ 2023 - i }</NavLink>
+                            </li>
                         )}
                     </ul>
                     </li>
 
                 <li className="nav-item">
-                    <NavLink to="shop" className='nav-link'>CONTACT</NavLink>
+                    <NavLink to="contact" className='nav-link'>CONTACT</NavLink>
                 </li>
             </ul>
         </div>
     </nav>
-  )
+  );
 }
