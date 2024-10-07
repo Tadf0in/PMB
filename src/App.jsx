@@ -12,7 +12,7 @@ import Home from './components/Home';
 
 const router = createBrowserRouter([
   {
-    path: '',
+    path: '/',
     element: <Root />,
     errorElement: <><Navbar /><PageError /><Footer /></>,
     children: [  
