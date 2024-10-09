@@ -8,11 +8,19 @@
 
 * {
   font-family: "Open Sans", sans-serif;
+  color: var(--secondary-color);
+}
+
+html {
+  background-color: var(--primary-color);
 }
 
 body {
   overflow-x: hidden;
-  min-height: 200vh;
+}
+
+.Outlet {
+  min-height: 100vh;
 }
 
 

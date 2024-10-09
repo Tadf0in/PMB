@@ -4,7 +4,7 @@ import blob from '../assets/blob.png';
 export default function Home() {
 
     return (<section id='home' className='container-fluid d-flex justify-content-evenly align-items-center'>
-        <div className='half left'>
+        <div className='home-half left'>
             <h1>
                 Polytech<br />Mont<br />Blanc
             </h1>
@@ -17,7 +17,7 @@ export default function Home() {
 
             <button>NOUS CONTACTER</button>
         </div>
-        <div className='half right'>
+        <div className='home-half right'>
             <img src={blob} alt="" />
         </div>
     </section>
