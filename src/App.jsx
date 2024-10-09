@@ -1,4 +1,4 @@
-import './App.css';
+import './css/main.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import PageError from './errors/PageError';
