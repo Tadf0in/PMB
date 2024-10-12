@@ -12,10 +12,6 @@
   color: var(--secondary-color);
 }
 
-html {
-  background-color: var(--primary-color);
-}
-
 body {
   overflow-x: hidden;
 }

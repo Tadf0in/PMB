@@ -26,10 +26,6 @@ nav ul {
     width: 150px;
     text-align: center;
 } 
-
-#nav-dropdown {
-    padding-left: 20px;
-}
   
 #logo img {
     width: var(--navbar-height);
@@ -43,6 +39,18 @@ nav ul {
     #mobile-nav {
         display: block;
     }
+    #logo img {
+        width: 100px;
+        height: 100px;
+    }
+    nav ul {
+        gap: 5px;
+    }
+    .nav-item {
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+    } 
 }
 @media (min-width: 800px) {
     #desktop-nav {

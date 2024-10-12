@@ -21,7 +21,7 @@ export default function Footer () {
     </div>
 
     <div className='footer-half footer-bottom'>
-        <div className='footer-bottom-top'>
+        <div className='footer-bottom-top' id='contact'>
             <div className='footer-bottom-left'>
                 <h2>Nous contacter</h2>
                 <span><i class="fa-brands fa-square-instagram"></i>@polytechmontblanc</span>
