@@ -12,7 +12,7 @@ export default function Root() {
 
     return (<>
         <div id="scrolltop"></div>
-        <header className='sticky-top'>
+        <header>
             <Navbar />
         </header>
         <div className='Outlet'>
