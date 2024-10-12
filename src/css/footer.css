@@ -96,10 +96,13 @@ footer h2 {
     display: flex;
     align-items: center;
 }
-
+.footer-bottom-right {
+    margin-top: 44px;
+    gap: 20px;
+}
 .footer-bottom img {
-    height: 60px;
-    width: 210px;
+    height: auto;
+    width: 150px;
 }
 .footer-bottom p {
     padding-bottom: 20px;
@@ -111,9 +114,12 @@ footer h2 {
         flex-direction: column;
     }
     .footer-bottom-right {
-        margin-top: 40px;
         flex-direction: row;
         gap: 40px;
+    }
+    .footer-bottom img {
+        height: 50px;
+        width: auto;
     }
 }
   

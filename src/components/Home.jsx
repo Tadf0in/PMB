@@ -3,7 +3,7 @@ import blob from '../assets/blob.png';
 
 export default function Home() {
 
-    return (<section id='home' className='container-fluid d-flex justify-content-evenly align-items-center'>
+    return (<section id='home'>
         <div className='home-half left'>
             <h1>
                 Polytech<br />Mont<br />Blanc
