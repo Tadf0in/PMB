@@ -11,7 +11,7 @@ footer h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 300px;
+    padding: 40px 0;
 }
 .footer-top * {
     width: calc((100% - 5px)/2);
@@ -26,7 +26,6 @@ footer h2 {
 .footer-top .partners-logos ul {
     height: 70%;
     width: 70%;
-    margin-right: 80px;
     margin-bottom: 0;
     padding-left: 0;
     display: grid;
@@ -51,12 +50,12 @@ footer h2 {
 .footer-top .vert-hr {
     background-color: var(--secondary-color);
     width: 5px;
-    height: 40%;
+    height: 120px;
+    margin: 0 80px;
 }
 .footer-top h2 {
-    padding-left: 80px;
+    margin: 0;
 }
-
 
 /* BOTTOM */
 .footer-bottom {
@@ -110,8 +109,37 @@ footer h2 {
 }
 
 @media (max-width: 800px) {
+    .footer-top {
+        flex-direction: column-reverse;
+    }
+    .footer-top h2 {
+        width: 90%;
+        max-width: 420px;
+    }
+    .footer-top .vert-hr {
+        width: 120px;
+        height: 5px;
+        margin: 30px 0;
+    }
+    .footer-top .partners-logos {
+        justify-content: center;
+        width: 90%;
+        max-width: 420px;
+    }
+    .footer-top .partners-logos ul {
+        height: 100%;
+        width: 100%;
+    }
+    .footer-top .partners-logos ul li {
+        height: 100%;
+    }
+
     .footer-bottom-top {
         flex-direction: column;
+    }
+    .footer-bottom-left {
+        width: 90%;
+        max-width: 420px;
     }
     .footer-bottom-right {
         flex-direction: row;
