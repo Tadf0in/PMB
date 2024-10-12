@@ -3,8 +3,12 @@ header {
     top: 0;
 }
 nav {
-    background-color: white;
+    background-color: white !important;
     width: 100%;
+    padding: 0 !important;
+}
+nav * {
+    background-color: white;
 }
 nav ul {
     width: 100%;
@@ -30,4 +34,21 @@ nav ul {
 #logo img {
     width: var(--navbar-height);
     height: var(--navbar-height);
+}
+
+@media (max-width: 800px) {
+    #desktop-nav {
+        display: none;
+    }
+    #mobile-nav {
+        display: block;
+    }
+}
+@media (min-width: 800px) {
+    #desktop-nav {
+        display: block;
+    }
+    #mobile-nav {
+        display: none;
+    }
 }

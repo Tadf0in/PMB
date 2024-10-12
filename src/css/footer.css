@@ -1,5 +1,5 @@
 footer h2 {
-    font-size: 45px !important;
+    font-size: 45px;
     font-weight: bold;
     letter-spacing: 5px;
 }
@@ -109,6 +109,10 @@ footer h2 {
 }
 
 @media (max-width: 800px) {
+    footer h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
     .footer-top {
         flex-direction: column-reverse;
     }
