@@ -1,6 +1,7 @@
 header {
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 nav {
     background-color: white !important;
@@ -26,8 +27,11 @@ nav ul {
     width: 150px;
     text-align: center;
 } 
-
 #nav-dropdown {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+#nav-dropdown li a {
     padding-left: 20px;
 }
   
@@ -43,6 +47,18 @@ nav ul {
     #mobile-nav {
         display: block;
     }
+    #logo img {
+        width: 100px;
+        height: 100px;
+    }
+    nav ul {
+        gap: 5px;
+    }
+    .nav-item {
+        font-size: 20px;
+        width: auto;
+        text-align: center;
+    } 
 }
 @media (min-width: 800px) {
     #desktop-nav {

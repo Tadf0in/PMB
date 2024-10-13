@@ -12,10 +12,12 @@ export default function Home() {
             <div className='hr'></div>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae doloremque laboriosam aspernatur doloribus consequatur optio fugiat eius laudantium minima eaque officia, ipsam aperiam, error illo dicta distinctio repellat ea.
+                Polytech Mont Blanc est un club de l'école Polytech Annecy-Chambéry qui a pour objectif de faire monter 20 étudiants au sommet de l'Europe.
             </p>
 
-            <button>NOUS CONTACTER</button>
+            <button onClick={() => {
+                window.location = "#contact";
+            }}>NOUS CONTACTER</button>
         </div>
         <div className='home-half right'>
             <img src={blob} alt="" />
