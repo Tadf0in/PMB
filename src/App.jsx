@@ -8,6 +8,7 @@ import Footer from './components/Root/Footer';
 import Navbar from './components/Root/Navbar';
 
 import Home from './components/Home';
+import Year from './components/Year';
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,14 @@ const router = createBrowserRouter([
       { 
         path: '',
         element: <Home />,
+      },
+      { 
+        path: 'infos',
+        element: <>Infos</>,
+      },
+      { 
+        path: ':year',
+        element: <Year />,
       },
     ]
   }

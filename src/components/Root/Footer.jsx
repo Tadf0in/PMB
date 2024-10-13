@@ -21,11 +21,11 @@ export default function Footer () {
     </div>
 
     <div className='footer-half footer-bottom'>
-        <div className='footer-bottom-top'>
+        <div className='footer-bottom-top' id='contact'>
             <div className='footer-bottom-left'>
                 <h2>Nous contacter</h2>
-                <span><i class="fa-brands fa-square-instagram"></i>@polytechmontblanc</span>
-                <span><i class="fa-solid fa-square-envelope"></i>contact@polytech-montblanc.fr</span>
+                <span><i className="fa-brands fa-square-instagram"></i>@polytechmontblanc</span>
+                <span><i className="fa-solid fa-square-envelope"></i>contact@polytech-montblanc.fr</span>
             </div>
             <div className='footer-bottom-right'>
                 <img src={logo_polytech} alt="polytech"/>
