@@ -18,6 +18,7 @@ export default function Year() {
 
     return (<>
         <h2 className='carousel-title'>Ascenscion {year}</h2>
+        { images ? 
         <div id="carouselYear" className="carousel slide">
             <div className="carousel-indicators">
                 {images.map((_, i) => (
@@ -51,5 +52,7 @@ export default function Year() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
+        : "Loading"
+        }
     </>);
 }

@@ -27,6 +27,10 @@ nav ul {
     width: 150px;
     text-align: center;
 } 
+#nav-dropdown {
+    max-height: 200px;
+    overflow-y: scroll;
+}
 #nav-dropdown li a {
     padding-left: 20px;
 }

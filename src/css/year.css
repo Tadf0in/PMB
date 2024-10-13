@@ -10,17 +10,27 @@
     margin-top: 20px;
     width: auto;
     max-width: 90vw;
-    height: 70vh;
+    max-height: 70vh;
     z-index: 0;
 }
 #carouselYear .carousel-inner {
+    max-height: 70vh;
     height: 100%;
 }
 #carouselYear .carousel-item {
+    max-height: 70vh;
     height: 100%;
 }
 #carouselYear img {
     width: 100%;
+    max-height: 70vh;
     height: 100%;
     object-fit: contain;
+}
+
+@media (max-width: 800px) {
+    .carousel-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
 }
