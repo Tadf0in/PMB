@@ -1,0 +1,26 @@
+.carousel-title {
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    width: 90vw;
+    max-width: 800px;
+}
+
+#carouselYear {
+    margin-top: 20px;
+    width: auto;
+    max-width: 90vw;
+    height: 70vh;
+    z-index: 0;
+}
+#carouselYear .carousel-inner {
+    height: 100%;
+}
+#carouselYear .carousel-item {
+    height: 100%;
+}
+#carouselYear img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

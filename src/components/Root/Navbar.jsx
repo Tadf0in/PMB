@@ -20,14 +20,14 @@ export default function Navbar() {
                 </NavLink>
             </li>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     ANNÉES
                 </a>
-                <ul class="dropdown-menu" id="nav-dropdown">
-                    {[...Array(8)].map((_, i) =>
-                        <li>
-                            <NavLink to={ (2023 - i).toString() } className='nav-link dropdown-item'>{ 2023 - i }</NavLink>
+                <ul className="dropdown-menu" id="nav-dropdown">
+                    {[...Array(20)].map((_, i) =>
+                        <li key={2024-i}>
+                            <NavLink to={ (2024 - i).toString() } className='nav-link dropdown-item'>{ 2024 - i }</NavLink>
                         </li>
                     )}
                 </ul>
@@ -39,18 +39,18 @@ export default function Navbar() {
         </ul>
     </nav>
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mobile-nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" id="logo">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary" id="mobile-nav">
+        <div className="container-fluid">
+            <div className="navbar-brand" href="#" id="logo">
                 <NavLink to="">
                     <img src={logo} className='d-inline-block' alt="Logo"/>
                 </NavLink>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            </div>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
                 <li className="nav-item">
                     <NavLink to="" className='nav-link'>ACCUEIL</NavLink>
                 </li>
@@ -59,14 +59,14 @@ export default function Navbar() {
                     <NavLink to="infos" className='nav-link'>INFOS</NavLink>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         ANNÉES
                     </a>
-                    <ul class="dropdown-menu" id="nav-dropdown">
+                    <ul className="dropdown-menu" id="nav-dropdown">
                         {[...Array(8)].map((_, i) =>
-                            <li>
-                                <NavLink to={ (2023 - i).toString() } className='nav-link dropdown-item'>{ 2023 - i }</NavLink>
+                            <li key={2024-i}>
+                                <NavLink to={ (2024 - i).toString() } className='nav-link dropdown-item'>{ 2024 - i }</NavLink>
                             </li>
                         )}
                     </ul>
