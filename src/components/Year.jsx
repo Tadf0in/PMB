@@ -1,5 +1,6 @@
 import '../css/year.css';
 import { useParams } from 'react-router'
+import { NavLink } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { loadImages } from '../utils/loadImages';
 
@@ -54,5 +55,13 @@ export default function Year() {
         </div>
         : "Loading"
         }
+        <div className='change-year'>
+            { parseInt(year) > 2005 ?
+                <NavLink to={"../" + (parseInt(year) - 1).toString()}>Année précédente</NavLink>
+            : ""}
+            { parseInt(year) < 2024 ?
+            <NavLink to={"../" + (parseInt(year) + 1).toString()}>Année suivante</NavLink>
+            : ""}
+        </div>
     </>);
 }

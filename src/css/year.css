@@ -28,6 +28,14 @@
     object-fit: contain;
 }
 
+.change-year {
+    width: 90vw;
+    max-width: 600px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
 @media (max-width: 800px) {
     .carousel-title {
         font-size: 30px;
