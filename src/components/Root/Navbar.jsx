@@ -42,7 +42,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary" id="mobile-nav">
         <div className="container-fluid">
             <div className="navbar-brand" href="#" id="logo">
-                <NavLink to="">
+                <NavLink to="" onClick={() => window.location.href = "#"}>
                     <img src={logo} className='d-inline-block' alt="Logo"/>
                 </NavLink>
             </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <NavLink to="" className='nav-link'>ACCUEIL</NavLink>
+                    <NavLink to="" className='nav-link' onClick={() => window.location.href = "#"}>ACCUEIL</NavLink>
                 </li>
 
                 <li className="nav-item">
@@ -73,7 +73,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="nav-item">
-                    <NavLink to="contact" className='nav-link'>CONTACT</NavLink>
+                    <NavLink to="" className='nav-link' onClick={() => window.location.href = "#contact"}>CONTACT</NavLink>
                 </li>
             </ul>
             </div>

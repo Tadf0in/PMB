@@ -8,18 +8,24 @@ import { loadImages } from '../utils/loadImages';
 export default function Year() {
     const { year } = useParams();
 
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState([-1]);
     useEffect(() => {
         const fetchImages = async () => {
             const loadedImages = await loadImages();
             setImages(loadedImages[year] || []);
         };
         fetchImages();
+        console.log(images);
     }, [year]);
+
 
     return (<>
         <h2 className='carousel-title'>Ascenscion {year}</h2>
-        { images ? 
+        { images[0] === -1 ? 
+        <div class="spinner-border m-5" role="status">
+            <span class="sr-only">Loading...</span>
+        </div> 
+        :
         <div id="carouselYear" className="carousel slide">
             <div className="carousel-indicators">
                 {images.map((_, i) => (
@@ -53,7 +59,6 @@ export default function Year() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-        : "Loading"
         }
         <div className='change-year'>
             { parseInt(year) > 2005 ?
