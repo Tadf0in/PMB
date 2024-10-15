@@ -20,7 +20,7 @@ export default function Year() {
 
 
     return (<>
-        <h2 className='carousel-title'>Ascenscion {year}</h2>
+        <h2 className='carousel-title'>Ascension {year}</h2>
         { images[0] === -1 ? 
         <div class="spinner-border m-5" role="status">
             <span class="sr-only">Loading...</span>
