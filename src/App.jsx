@@ -9,6 +9,7 @@ import Navbar from './components/Root/Navbar';
 
 import Home from './components/Home';
 import Year from './components/Year';
+import Infos from './components/Infos';
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       { 
         path: 'infos',
-        element: <>Infos</>,
+        element: <Infos />,
       },
       { 
         path: ':year',
