@@ -1,18 +1,24 @@
 import '../css/galerie.css';
 import { useParams } from 'react-router'
 import { NavLink } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { loadImages } from '../utils/loadImages';
+import { Carousel } from 'bootstrap/dist/js/bootstrap.min';
 
 
 export default function Galerie() {
     const { year } = useParams();
-
+    const carouselRef = useRef(null);
+    
     const [images, setImages] = useState([-1]);
     useEffect(() => {
         const fetchImages = async () => {
             const loadedImages = await loadImages();
             setImages(loadedImages[year] || []);
+            
+            if (carouselRef.current) {
+                new Carousel(carouselRef.current).to(0);
+            }
         };
         fetchImages();
     }, [year]);
@@ -21,8 +27,8 @@ export default function Galerie() {
     return (<>
         <h1 className='title'>GALERIE</h1>
         { images[0] === -1 ? 
-        <div class="spinner-border m-5" role="status">
-            <span class="sr-only">Loading...</span>
+        <div className="spinner-border m-5" role="status">
+            <span className="sr-only">Loading...</span>
         </div> 
         :
         <>
@@ -45,7 +51,7 @@ export default function Galerie() {
                 </ul>
             </div>
         </div>
-        <div id="carouselYear" className="carousel slide">
+        <div id="carouselYear" className="carousel slide" ref={carouselRef}>
             <div className="carousel-indicators">
                 {images.map((_, i) => (
                     <button 
