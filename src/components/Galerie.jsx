@@ -1,11 +1,11 @@
-import '../css/year.css';
+import '../css/galerie.css';
 import { useParams } from 'react-router'
 import { NavLink } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { loadImages } from '../utils/loadImages';
 
 
-export default function Year() {
+export default function Galerie() {
     const { year } = useParams();
 
     const [images, setImages] = useState([-1]);
@@ -15,17 +15,36 @@ export default function Year() {
             setImages(loadedImages[year] || []);
         };
         fetchImages();
-        console.log(images);
     }, [year]);
 
 
     return (<>
-        <h2 className='carousel-title'>Ascension {year}</h2>
+        <h1 className='title'>GALERIE</h1>
         { images[0] === -1 ? 
         <div class="spinner-border m-5" role="status">
             <span class="sr-only">Loading...</span>
         </div> 
         :
+        <>
+        <div id='fresque'>
+            <div className='scrollable-x'>
+                <ul>
+                    {[...Array(20)].map((_, i) =>
+                        <>
+                        <li key={2024-i} className={'year' + (year*1 === 2024-i ? " active" : "")}>
+                            <NavLink to={ '/galerie/' + (2024 - i).toString() } className='year-link'>
+                                { 2024 - i }
+                                <div className='point'></div>
+                            </NavLink>
+                        </li>
+                        {i < 19 ?
+                        <div className='trait'></div>
+                        : <></>}
+                        </>
+                    )}
+                </ul>
+            </div>
+        </div>
         <div id="carouselYear" className="carousel slide">
             <div className="carousel-indicators">
                 {images.map((_, i) => (
@@ -59,14 +78,7 @@ export default function Year() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
+        </>
         }
-        <div className='change-year'>
-            { parseInt(year) > 2005 ?
-                <NavLink to={"../" + (parseInt(year) - 1).toString()}>Année précédente</NavLink>
-            : ""}
-            { parseInt(year) < 2024 ?
-            <NavLink to={"../" + (parseInt(year) + 1).toString()}>Année suivante</NavLink>
-            : ""}
-        </div>
     </>);
 }

@@ -8,33 +8,33 @@ export default function Navbar() {
     <nav id="desktop-nav">
         <ul id="navbar">
             <li className="nav-item" onClick={() => window.location.href = "#"}>
-                <NavLink to="" className='nav-link'>ACCUEIL</NavLink>
+                <NavLink to="/" className='nav-link'>ACCUEIL</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to="infos" className='nav-link'>INFOS</NavLink>
+                <NavLink to="/infos" className='nav-link'>INFOS</NavLink>
             </li>
 
             <li className='nav-item' id="logo">
-                <NavLink to="" onClick={() => window.location.href = "#"}>
+                <NavLink to="/" onClick={() => window.location.href = "#"}>
                     <img src={logo} className='d-inline-block' alt="Logo"/>
                 </NavLink>
             </li>
 
             <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    ANNÉES
+                    GALERIE
                 </a>
                 <ul className="dropdown-menu" id="nav-dropdown">
                     {[...Array(20)].map((_, i) =>
                         <li key={2024-i}>
-                            <NavLink to={ (2024 - i).toString() } className='nav-link dropdown-item'>{ 2024 - i }</NavLink>
+                            <NavLink to={ "/galerie/" + (2024 - i).toString() } className='nav-link dropdown-item'>{ 2024 - i }</NavLink>
                         </li>
                     )}
                 </ul>
             </li>
 
             <li className="nav-item">
-                <NavLink to="" className='nav-link' onClick={() => window.location.href = "#contact"}>CONTACT</NavLink>
+                <NavLink to="/" className='nav-link' onClick={() => window.location.href = "#contact"}>CONTACT</NavLink>
             </li>
         </ul>
     </nav>

@@ -8,7 +8,7 @@ import Footer from './components/Root/Footer';
 import Navbar from './components/Root/Navbar';
 
 import Home from './components/Home';
-import Year from './components/Year';
+import Galerie from './components/Galerie';
 import Infos from './components/Infos';
 
 
@@ -26,10 +26,19 @@ const router = createBrowserRouter([
         path: 'infos',
         element: <Infos />,
       },
-      { 
-        path: ':year',
-        element: <Year />,
-      },
+      {
+        path: 'galerie',
+        children: [
+          {
+            path: '',
+            element: <Galerie />,
+          },
+          {
+            path: ':year',
+            element: <Galerie />,
+          }
+        ]
+      }
     ]
   }
 ], {
