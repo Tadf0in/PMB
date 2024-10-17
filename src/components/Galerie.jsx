@@ -13,8 +13,8 @@ export default function Galerie() {
     const [images, setImages] = useState([-1]);
     useEffect(() => {
         const fetchImages = async () => {
-            const loadedImages = await loadImages();
-            setImages(loadedImages[year] || []);
+            const loadedImages = await loadImages(year);
+            setImages(loadedImages);
             
             if (carouselRef.current) {
                 new Carousel(carouselRef.current).to(0);
