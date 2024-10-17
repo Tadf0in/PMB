@@ -13,6 +13,7 @@ export default function Galerie() {
     const [images, setImages] = useState([-1]);
     useEffect(() => {
         const fetchImages = async () => {
+            setImages([-1]);
             const loadedImages = await loadImages(year);
             setImages(loadedImages);
             
@@ -26,12 +27,6 @@ export default function Galerie() {
 
     return (<>
         <h1 className='title'>GALERIE</h1>
-        { images[0] === -1 ? 
-        <div className="spinner-border m-5" role="status">
-            <span className="sr-only">Loading...</span>
-        </div> 
-        :
-        <>
         <div id='fresque'>
             <div className='scrollable-x'>
                 <ul>
@@ -51,6 +46,12 @@ export default function Galerie() {
                 </ul>
             </div>
         </div>
+        { images[0] === -1 ? 
+        <div className="spinner-border m-5" role="status">
+            <span className="sr-only">Loading...</span>
+        </div> 
+        :
+        <>
         <div id="carouselYear" className="carousel slide" ref={carouselRef}>
             <div className="carousel-indicators">
                 {images.map((_, i) => (
