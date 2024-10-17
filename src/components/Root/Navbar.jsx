@@ -61,12 +61,12 @@ export default function Navbar() {
 
                 <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ANNÉES
+                        GALERIE
                     </a>
                     <ul className="dropdown-menu" id="nav-dropdown">
                         {[...Array(20)].map((_, i) =>
                             <li key={2024-i}>
-                                <NavLink to={ (2024 - i).toString() } className='nav-link dropdown-item'>{ 2024 - i }</NavLink>
+                                <NavLink to={ "/galerie/" + (2024 - i).toString() } className='nav-link dropdown-item'>{ 2024 - i }</NavLink>
                             </li>
                         )}
                     </ul>
