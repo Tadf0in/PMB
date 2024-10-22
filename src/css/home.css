@@ -18,12 +18,6 @@
     letter-spacing: 5px;
     line-height: 65px;
 }
-#home .hr {
-    background-color: var(--secondary-color);
-    height: 5px;
-    width: 120px;
-    margin: 40px 0;
-}
 #home p {
     margin-bottom: 40px;
     font-size: 18px;

@@ -1,5 +1,9 @@
-#infos {
+.Outlet section {
     padding: 50px 0;
+}
+
+
+#infos {
     width: 80vw;
     display: flex;
     flex-direction: column;
@@ -9,11 +13,48 @@
     margin: 0;
 }
 #infos .hr {
-    background-color: var(--secondary-color);
-    width: 120px;
-    height: 5px;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 #infos p {
     text-align: justify;
+}
+
+
+#projet {
+    width: 80vw;
+    display: flex;
+    gap: 80px;
+}
+.projet-left, .projet-right {
+    width: 50%;
+}
+.projet-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.projet-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.projet-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: justify;
+}
+.projet-right .hr {
+    margin: 30px 0;
+}
+
+
+#equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#equipe .hr {
+    margin: 30px 0;
 }
