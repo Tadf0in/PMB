@@ -1,5 +1,4 @@
-import '../css/home.css';
-import blob from '../assets/blob.png';
+import blob from '../../assets/blob.png';
 
 export default function Home() {
 

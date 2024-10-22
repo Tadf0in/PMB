@@ -7,9 +7,8 @@ import Root from './components/Root/Root';
 import Footer from './components/Root/Footer';
 import Navbar from './components/Root/Navbar';
 
-import Home from './components/Home';
+import Accueil from './components/Accueil';
 import Galerie from './components/Galerie';
-import Infos from './components/Infos';
 
 
 const router = createBrowserRouter([
@@ -20,11 +19,7 @@ const router = createBrowserRouter([
     children: [  
       { 
         path: '',
-        element: <Home />,
-      },
-      { 
-        path: 'infos',
-        element: <Infos />,
+        element: <Accueil />,
       },
       {
         path: 'galerie',
