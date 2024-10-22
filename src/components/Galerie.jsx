@@ -25,7 +25,7 @@ export default function Galerie() {
     }, [year]);
 
 
-    return (<>
+    return (<section id="galerie">
         <h1 className='title'>GALERIE</h1>
         <div id='fresque'>
             <div className='scrollable-x'>
@@ -87,5 +87,5 @@ export default function Galerie() {
         </div>
         </>
         }
-    </>);
+    </section>);
 }
