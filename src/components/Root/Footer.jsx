@@ -20,13 +20,13 @@ export default function Footer () {
             </ul>
         </div>
         <div className='vert-hr'></div>
-        <h2>Partenaires</h2>
+        <h2 className='rh2'>Partenaires</h2>
     </div>
 
     <div className='footer-half footer-bottom'>
         <div className='footer-bottom-top' id='contact'>
             <div className='footer-bottom-left'>
-                <h2>Nous contacter</h2>
+                <h2 className='rh2'>Nous contacter</h2>
                 <span><i className="fa-brands fa-square-instagram"></i>@polytechmontblanc</span>
                 <span><i className="fa-solid fa-square-envelope"></i>contact@polytech-montblanc.fr</span>
             </div>

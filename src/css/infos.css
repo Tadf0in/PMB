@@ -7,9 +7,6 @@
 }
 #infos h2 {
     margin: 0;
-    font-size: 45px;
-    font-weight: bold;
-    letter-spacing: 5px;
 }
 #infos .hr {
     background-color: var(--secondary-color);

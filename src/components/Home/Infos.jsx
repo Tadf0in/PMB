@@ -1,7 +1,7 @@
 export default function Infos() {
 
     return (<section id="infos">
-        <h2>Qui sommes-nous ?</h2>
+        <h2 className="rh2">Qui sommes-nous ?</h2>
         <div className='hr'></div>
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias sed commodi doloremque? Dolores expedita vitae neque commodi ratione doloremque consequatur laborum, quos fugiat veniam nesciunt excepturi, quas nobis nemo sit.
