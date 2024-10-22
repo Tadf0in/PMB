@@ -69,6 +69,7 @@
     width: 50%;
     height: 400px;
     object-fit: cover;
+    z-index: 1;
 }
 .equipe-annecy {
     display: flex;
@@ -85,12 +86,20 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    overflow: hidden;
 }
 .list-br {
+    flex: 0 0 auto;
     width: 100%;
     display: flex;
-    overflow-x: scroll;
     gap: 100px;
+    z-index: 10;
+}
+.equipe-annecy .list-br {
+    animation : Scroll-left 10s linear infinite;
+}
+.equipe-chambery .list-br {
+    animation : Scroll-right 10s linear infinite;
 }
 .membre-br {
     display: flex;
@@ -102,4 +111,13 @@
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+@keyframes Scroll-left {
+    0% {transform: translateX(0%); }
+    100% {transform: translateX(-1500px); }
+}
+@keyframes Scroll-right {
+    0% {transform: translateX(-1500px); }
+    100% {transform: translateX(0%); }
 }

@@ -53,15 +53,15 @@ export default function Equipe(params) {
                     <h3>Bureau d{ site == "annecy" ? "'Annecy" : "e Chambéry"}</h3>
                     <div className='list-br'>
                         { loading ? <p>Chargement des photos</p> :
-                        photos.map(({ ville, prenom, role, src }) => (<>
+                        [...photos, ...photos].map(({ ville, prenom, role, src }) => (<>
                             { ville === site ?
                             <div key={prenom + '-' + role} className='membre-br'>
                                 <img src={src} alt={prenom + "-" + role} />
                                 <span>{prenom}</span>
                                 <span>{role}</span>
                             </div>
-                            : " " }</>
-                        ))}
+                            : " " }
+                        </>))}
                     </div>
                 </div>
             </div>
