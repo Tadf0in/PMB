@@ -5,6 +5,8 @@ import logo_maxirace from '../../assets/partners/logo_maxirace.png';
 import logo_bde from '../../assets/partners/logo_bde.png';
 import logo_paul from '../../assets/partners/logo_paul.png';
 import logo_spacebloc from '../../assets/partners/logo_spacebloc.png';
+import logo_spartan from '../../assets/partners/logo_spartan.jpg';
+import logo_marathon_annecy from '../../assets/partners/Logo_Marathon_Annecy.png';
 
 export default function Footer () {
     return (<>
@@ -15,8 +17,8 @@ export default function Footer () {
                 <li><img src={logo_bde} alt="bde" /></li>
                 <li><img src={logo_paul} alt="paul" /></li>
                 <li><img src={logo_spacebloc} alt="spacebloc" /></li>
-                <li><img src={logo_maxirace} alt="maxirace" /></li>
-                <li><img src={logo_maxirace} alt="maxirace" /></li>
+                <li><img src={logo_spartan} alt="spartan" /></li>
+                <li><img src={logo_marathon_annecy} alt="marathon d'annecy" /></li>
             </ul>
         </div>
         <div className='vert-hr'></div>

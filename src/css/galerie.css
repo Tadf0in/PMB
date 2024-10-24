@@ -1,9 +1,14 @@
+#galerie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title {
     font-weight: bold;
     font-size: 60px;
     letter-spacing: 10px;
     line-height: 65px;
-    text-align: center;
 }
 
 #fresque {

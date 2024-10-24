@@ -48,7 +48,11 @@ export default function Equipe(params) {
         <div className='bureaux'>
             { ["annecy", "chambery"].map((site, i) => (
             <div className={ "bureau equipe-" + site }>
+                { site == "annecy" ? 
                 <img src={annecy} alt={site} className='photo-br'/>
+                : 
+                <img src={chambery} alt={site} className='photo-br'/>
+                }
                 <div className='org-br'>
                     <h3>Bureau d{ site == "annecy" ? "'Annecy" : "e Chambéry"}</h3>
                     <div className='list-br'>
@@ -57,8 +61,9 @@ export default function Equipe(params) {
                             { ville === site ?
                             <div key={prenom + '-' + role} className='membre-br'>
                                 <img src={src} alt={prenom + "-" + role} />
-                                <span>{prenom}</span>
-                                <span>{role}</span>
+                                <span className='prenom-br'>{prenom}</span>
+                                <div className='mini-hr'></div>
+                                <span className='role-br'>{role}</span>
                             </div>
                             : " " }
                         </>))}

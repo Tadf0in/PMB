@@ -63,11 +63,12 @@
 }
 #equipe .bureaux {
     width: 100%;
-    height: 800px;
+    --bureau-height : 800px;
+    height: var(--bureau-height);
 }
 #equipe .photo-br {
     width: 50%;
-    height: 400px;
+    height: calc(var(--bureau-height) / 2);
     object-fit: cover;
     z-index: 1;
 }
@@ -80,13 +81,20 @@
 }
 .org-br {
     width: 50%;
-    height: 400px;
+    height: calc(var(--bureau-height) / 2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     overflow: hidden;
+    padding-bottom: 20px;
+}.org-br h3 {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+
 }
 .list-br {
     flex: 0 0 auto;
@@ -94,12 +102,13 @@
     display: flex;
     gap: 100px;
     z-index: 10;
+    --vitesse : 15s;
 }
 .equipe-annecy .list-br {
-    animation : Scroll-left 10s linear infinite;
+    animation : Scroll-left var(--vitesse) linear infinite;
 }
 .equipe-chambery .list-br {
-    animation : Scroll-right 10s linear infinite;
+    animation : Scroll-right var(--vitesse) linear infinite;
 }
 .membre-br {
     display: flex;
@@ -111,6 +120,20 @@
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+}
+.prenom-br {
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.mini-hr {
+    background-color: var(--secondary-color);
+    height: 2px;
+    width: 10px;
+    margin: 5px 0;
+}
+.role-br {
+    font-weight: 300;
 }
 
 @keyframes Scroll-left {
