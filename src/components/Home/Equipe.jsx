@@ -62,7 +62,7 @@ export default function Equipe(params) {
                             <div key={prenom + '-' + role} className='membre-br'>
                                 <img src={src} alt={prenom + "-" + role} />
                                 <span className='prenom-br'>{prenom}</span>
-                                <div className='mini-hr'></div>
+                                {/* <div className='mini-hr'></div> */}
                                 <span className='role-br'>{role}</span>
                             </div>
                             : " " }

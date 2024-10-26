@@ -89,12 +89,12 @@
     gap: 20px;
     overflow: hidden;
     padding-bottom: 20px;
-}.org-br h3 {
+}
+.org-br h3 {
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 4px;
     margin-bottom: 20px;
-
 }
 .list-br {
     flex: 0 0 auto;
@@ -143,4 +143,65 @@
 @keyframes Scroll-right {
     0% {transform: translateX(-1500px); }
     100% {transform: translateX(0%); }
+}
+
+@media (max-width: 800px) {
+    #projet {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .projet-left, .projet-right {
+        width: 100%;
+    }
+
+    #equipe .bureaux {
+        --bureau-height : 90vh;
+    }
+    #equipe .photo-br {
+        width: 100%;
+        height: calc(var(--bureau-height) / 4);
+        object-fit: cover;
+        z-index: 1;
+    }
+    .bureau {
+        flex-direction: column;
+    }
+    .org-br {
+        width: 100%;
+        height: calc(var(--bureau-height) / 4);
+        gap: 15px;
+        padding-bottom: 0;
+    }
+    .org-br h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .membre-br {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+    .prenom-br {
+        margin-top: 2px;
+    }
+    .membre-br img {
+        width: calc(var(--bureau-height) / 9);
+        height: calc(var(--bureau-height) / 9);
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .equipe-annecy .list-br {
+        animation : Scroll-left-mobile var(--vitesse) linear infinite;
+    }
+    .equipe-chambery .list-br {
+        animation : Scroll-right-mobile var(--vitesse) linear infinite;
+    }
+    @keyframes Scroll-left-mobile {
+        0% {transform: translateX(0%); }
+        100% {transform: translateX(-1500px); }
+    }
+    @keyframes Scroll-right-mobile {
+        0% {transform: translateX(-1500px); }
+        100% {transform: translateX(0%); }
+    }
 }
