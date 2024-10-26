@@ -22,7 +22,7 @@ export default function Navbar() {
                 <NavLink to="/galerie/2024" className='nav-link'>GALERIE</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to="/" className='nav-link' onClick={() => window.location.href = "#contact"}>CONTACT</NavLink>
+                <NavLink to="/contact" className='nav-link'>CONTACT</NavLink>
             </li>
         </ul>
     </nav>
@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary" id="mobile-nav">
         <div className="container-fluid">
             <div className="navbar-brand" href="#" id="logo">
-                <NavLink to="" onClick={() => window.location.href = "#"}>
+                <NavLink to="/" onClick={() => window.location.href = "#"}>
                     <img src={logo} className='d-inline-block' alt="Logo"/>
                 </NavLink>
             </div>
@@ -40,16 +40,16 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <NavLink to="" className='nav-link' onClick={() => window.location.href = "#"}>ACCUEIL</NavLink>
+                    <NavLink to="/" className='nav-link' onClick={() => window.location.href = "#"}>ACCUEIL</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="infos" className='nav-link'>INFOS</NavLink>
+                    <NavLink to="/infos" className='nav-link'>INFOS</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/galerie/2024" className='nav-link'>GALERIE</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="" className='nav-link' onClick={() => window.location.href = "#contact"}>CONTACT</NavLink>
+                    <NavLink to="/contact" className='nav-link'>CONTACT</NavLink>
                 </li>
             </ul>
             </div>
