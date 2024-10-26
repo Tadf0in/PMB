@@ -11,7 +11,7 @@ export default function Navbar() {
                 <NavLink to="/" className='nav-link'>ACCUEIL</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to="/infos" className='nav-link'>INFOS</NavLink>
+                <NavLink to="/agenda" className='nav-link'>AGENDA</NavLink>
             </li>
             <li className='nav-item' id="logo">
                 <NavLink to="/" onClick={() => window.location.href = "#"}>
@@ -43,7 +43,7 @@ export default function Navbar() {
                     <NavLink to="/" className='nav-link' onClick={() => window.location.href = "#"}>ACCUEIL</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/infos" className='nav-link'>INFOS</NavLink>
+                    <NavLink to="/agenda" className='nav-link'>AGENDA</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/galerie/2024" className='nav-link'>GALERIE</NavLink>

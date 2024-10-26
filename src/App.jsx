@@ -8,6 +8,7 @@ import Root from './components/Root/Root';
 import Accueil from './components/Accueil';
 import Galerie from './components/Galerie';
 import Contact from './components/Contact';
+import Agenda from './components/Agenda';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       { 
         path: 'contact',
         element: <Contact />,
+      },
+      { 
+        path: 'agenda',
+        element: <Agenda />,
       },
       {
         path: 'galerie',
