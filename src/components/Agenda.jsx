@@ -1,21 +1,35 @@
 import '../css/agenda.css';
+import useFetch from '../hooks/useFetch';
 
 export default function Agenda() {
+    const {loading, data, errors} = useFetch("agenda");
+
+    function toDate(date) {
+        const [dd, mm, yyyy] = date.split("/");
+        const formated = mm + "/" + dd + "/" + yyyy;
+        return new Date(formated);
+    }
+
     return <section id="agenda">
         <h2 className="rh2">Agenda</h2>
         <div className="hr"></div>
         <div className='events'>
-            <div className="event">
-                <span className="event-title">Concours de logo</span>
-                <span className="event-date">Juqu'au 10 novembre</span>
-                <p className="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias iure nobis ea aut officia vero rem tempora? Laudantium sapiente aspernatur laborum atque, aut harum dolores corrupti! Inventore, omnis excepturi!</p>
-            </div>
-            <div className="event">
-                <span className="event-title">Randonnée de passation</span>
-                <span className="event-date">Dimanche 20 octobre</span>
-                <p className="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam quisquam dolor debitis, nisi numquam repudiandae odit voluptatem possimus nihil aliquam deleniti doloremque consequuntur ullam dolorem expedita libero molestias eum. Labore?</p>
-            </div>
+            { data && !loading ?
+            data.sort((a, b) => toDate(a.date_format) < toDate(b.date_format)).map((e, i) => 
+                <div className="event" key={i}>
+                    <span className="event-title">{e.titre}</span>
+                    <div className='event-infos'>
+                        <span className="event-date">{e.date}</span> 
+                        { e.lieu ? <> • <span className="event-lieu">{e.lieu}</span></> : <></>}
+                    </div>
+                    <p className="event-description">{e.description}</p>
+                </div>
+            )
+            :
+                <div className="spinner-border m-5 align-self-center" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div> 
+            }
         </div>
-
     </section>
 }
