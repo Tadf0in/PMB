@@ -14,6 +14,11 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+#contact a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    text-decoration: solid underline 3px var(--primary-color);
+}
 #contact i {
     font-size: 40px;
     margin-right: 20px;

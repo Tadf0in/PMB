@@ -11,8 +11,8 @@ export default function Contact() {
     <h2 className='rh2'>Nous contacter</h2>
     <div className='hr'></div>
     <div className='contact-list'>
-        <span><i className="fa-brands fa-instagram"></i>@polytechmontblanc</span>
-        <span><i className="fa-regular fa-envelope"></i>contact@polytech-montblanc.fr</span>
+        <span><i className="fa-brands fa-instagram"></i><a href="https://www.instagram.com/polytechmontblanc">@polytechmontblanc</a></span>
+        <span><i className="fa-regular fa-envelope"></i><a href="mailto:contact@polytech-montblanc.fr">contact@polytech-montblanc.fr</a></span>
     </div>
 
     {/* <form>

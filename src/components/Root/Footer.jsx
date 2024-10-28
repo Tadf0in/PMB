@@ -29,12 +29,12 @@ export default function Footer () {
         <div className='footer-bottom-top' id='contact'>
             <div className='footer-bottom-left'>
                 <h2 className='rh2'>Nous contacter</h2>
-                <span><i className="fa-brands fa-square-instagram"></i>@polytechmontblanc</span>
-                <span><i className="fa-solid fa-square-envelope"></i>contact@polytech-montblanc.fr</span>
+                <span><i className="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com/polytechmontblanc">@polytechmontblanc</a></span>
+                <span><i className="fa-solid fa-square-envelope"></i><a href="mailto:contact@polytech-montblanc.fr">contact@polytech-montblanc.fr</a></span>
             </div>
             <div className='footer-bottom-right'>
-                <img src={logo_polytech} alt="polytech"/>
-                <img src={logo_usmb} alt="usmb"/>
+                <a href="https://www.polytech.univ-smb.fr/ecole/polytech-annecy-chambery"><img src={logo_polytech} alt="polytech"/></a>
+                <a href="https://www.univ-smb.fr/"><img src={logo_usmb} alt="usmb"/></a>
             </div>
         </div>
         <p>© 2024 Polytech Mont Blanc</p>

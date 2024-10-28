@@ -92,6 +92,10 @@
     display: flex;
     align-items: center;
 }
+.footer-bottom-left a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
 .footer-bottom-right {
     margin-top: 44px;
     gap: 20px;

@@ -22,7 +22,8 @@
     margin-bottom: 40px;
     font-size: 18px;
 }
-#home button {
+#home button, #home .home-btn {
+    width: 187px;
     padding: 10px 20px;
     background-color: var(--primary-color);
     color: var(--tertiary-color);
