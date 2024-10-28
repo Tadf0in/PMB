@@ -15,7 +15,7 @@ export default function Agenda() {
         <div className="hr"></div>
         <div className='events'>
             { data && !loading ?
-            data.sort((a, b) => toDate(a.date_format) < toDate(b.date_format)).map((e, i) => 
+            data.sort((a, b) => toDate(b.date_format) - toDate(a.date_format)).map((e, i) => 
                 <div className="event" key={i}>
                     <span className="event-title">{e.titre}</span>
                     <div className='event-infos'>
