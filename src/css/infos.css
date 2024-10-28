@@ -64,6 +64,8 @@
 #equipe .bureaux {
     width: 100%;
     --bureau-height : 800px;
+    --membre-img-width: 200px;
+    --vitesse : 15s;
     height: var(--bureau-height);
 }
 #equipe .photo-br {
@@ -102,13 +104,6 @@
     display: flex;
     gap: 100px;
     z-index: 10;
-    --vitesse : 15s;
-}
-.equipe-annecy .list-br {
-    animation : Scroll-left var(--vitesse) linear infinite;
-}
-.equipe-chambery .list-br {
-    animation : Scroll-right var(--vitesse) linear infinite;
 }
 .membre-br {
     display: flex;
@@ -116,8 +111,8 @@
     align-items: center;
 }
 .membre-br img {
-    width: 200px;
-    height: 200px;
+    width: var(--membre-img-width);
+    height: var(--membre-img-width);
     object-fit: cover;
     border-radius: 50%;
 }
@@ -136,12 +131,23 @@
     font-weight: 300;
 }
 
+
+.equipe-annecy .list-br {
+    animation : Scroll-left var(--vitesse) linear infinite;
+}
+.equipe-chambery .list-br {
+    animation : Scroll-right var(--vitesse) linear infinite;
+}
 @keyframes Scroll-left {
     0% {transform: translateX(0%); }
-    100% {transform: translateX(-1500px); }
+    100% {
+        transform: translateX(calc((var(--membre-img-width) + 100px) * -5)); 
+    }
 }
 @keyframes Scroll-right {
-    0% {transform: translateX(-1500px); }
+    0% {
+        transform: translateX(calc((var(--membre-img-width) + 100px) * -5)); 
+    }
     100% {transform: translateX(0%); }
 }
 
@@ -156,12 +162,12 @@
 
     #equipe .bureaux {
         --bureau-height : 90vh;
+        --membre-img-width: calc(var(--bureau-height) / 9);
+        --vitesse: 10s;
     }
     #equipe .photo-br {
         width: 100%;
         height: calc(var(--bureau-height) / 4);
-        object-fit: cover;
-        z-index: 1;
     }
     .bureau {
         flex-direction: column;
@@ -182,26 +188,5 @@
     }
     .prenom-br {
         margin-top: 2px;
-    }
-    .membre-br img {
-        width: calc(var(--bureau-height) / 9);
-        height: calc(var(--bureau-height) / 9);
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
-    .equipe-annecy .list-br {
-        animation : Scroll-left-mobile var(--vitesse) linear infinite;
-    }
-    .equipe-chambery .list-br {
-        animation : Scroll-right-mobile var(--vitesse) linear infinite;
-    }
-    @keyframes Scroll-left-mobile {
-        0% {transform: translateX(0%); }
-        100% {transform: translateX(-1500px); }
-    }
-    @keyframes Scroll-right-mobile {
-        0% {transform: translateX(-1500px); }
-        100% {transform: translateX(0%); }
     }
 }
