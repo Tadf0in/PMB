@@ -16,10 +16,7 @@ export default defineConfig({
       writeBundle: async () => {
         // CNAME
         await fs.writeFile(path.join(__dirname, 'docs', 'CNAME'), 'polytech-montblanc.fr');
-
-        // Google verification
-        await fs.writeFile(path.join(__dirname, 'docs', 'google260bb536251b360c.html'), 'google-site-verification: google260bb536251b360c.html');
-
+        
         // 404.html
         await fs.copyFile(
           path.join(__dirname, 'docs', 'index.html'),
