@@ -7,8 +7,8 @@ export default function Navbar() {
     return (<>
     <nav id="desktop-nav">
         <ul id="navbar">
-            <li className="nav-item" onClick={() => window.location.href = "#"}>
-                <NavLink to="/" className='nav-link'>ACCUEIL</NavLink>
+            <li className="nav-item">
+                <NavLink to="/"  onClick={() => window.location.href = "#"} className='nav-link'>ACCUEIL</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink to="/agenda" className='nav-link'>AGENDA</NavLink>
