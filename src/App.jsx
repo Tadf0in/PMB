@@ -9,6 +9,7 @@ import Accueil from './components/Accueil';
 import Galerie from './components/Galerie';
 import Contact from './components/Contact';
 import Agenda from './components/Agenda';
+import EcwidStore from './components/Shop/EcwidStore';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,12 @@ const router = createBrowserRouter([
             element: <Galerie />,
           }
         ]
+      },
+      {
+        path: 'goodies',
+        element: <>
+          <EcwidStore />
+        </>
       }
     ]
   }
