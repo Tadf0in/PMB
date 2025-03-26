@@ -1,3 +1,6 @@
 #goodies {
     max-width: 80vw;
 }
+.details-product-purchase__add-to-bag button span {
+    color: white;
+}

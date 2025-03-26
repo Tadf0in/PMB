@@ -30,7 +30,7 @@ export default function EcwidStore() {
         };
     }, []);
 
-  return (<> {isLoading ? 
+    return (<> {isLoading ? 
         <div className="spinner-border m-5" role="status">
             <span className="sr-only">Loading...</span>
         </div>
