@@ -10,6 +10,7 @@ import Galerie from './components/Galerie';
 import Contact from './components/Contact';
 import Agenda from './components/Agenda';
 import EcwidStore from './components/Shop/EcwidStore';
+import Resultats from './components/Resultats';
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         element: <>
           <EcwidStore />
         </>
+      },
+      {
+        path: 'resultats-cross',
+        element: <Resultats />,
       }
     ]
   }
