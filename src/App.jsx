@@ -10,7 +10,8 @@ import Galerie from './components/Galerie';
 import Contact from './components/Contact';
 import Agenda from './components/Agenda';
 import EcwidStore from './components/Shop/EcwidStore';
-import Resultats from './components/Resultats';
+import Cross from './components/Cross';
+import Tombola from './components/Tombola';
 
 
 const router = createBrowserRouter([
@@ -52,7 +53,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'resultats-cross',
-        element: <Resultats />,
+        element: <Cross />,
+      },
+      {
+        path: 'resultats-tombola',
+        element: <Tombola />,
       }
     ]
   }
