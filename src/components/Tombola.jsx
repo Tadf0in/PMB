@@ -17,7 +17,7 @@ export default function Tombola() {
             result.Prenom.toLowerCase().includes(term)
         );
     });
-
+        
     return <section id="tombola">
         <h2 className="rh2">Tombola</h2>
         <div className="hr"></div>
@@ -64,7 +64,7 @@ export default function Tombola() {
             )}
         </div>        
 
-        { filteredResults.length > 0 && 
+        { data && filteredResults.length > 0 && 
             <div>
                 <br />
                 <p className="text-center">

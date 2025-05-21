@@ -6,9 +6,6 @@ export default function Cross() {
     const {loading, data, errors} = useFetch("cross");
     const [searchTerm, setSearchTerm] = useState('');
 
-    console.log(loading, data, errors)
-    if(data) { console.log(data) }
-
     // Filtrer les résultats en fonction du numéro de dossard
     const filteredResults = data?.filter(result => {
         if (searchTerm !== '' && !isNaN(searchTerm) && !isNaN(result.Dossard)) {
